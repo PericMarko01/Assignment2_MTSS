@@ -22,6 +22,18 @@ public class RomanPrinterTest {
         }
     }
     @Test
+    public void testNullString()
+    {
+        try
+        {
+            RomanPrinter.printAsciiArt(null);
+        }
+        catch (NullPointerException e)
+        {
+            assertEquals("The string cannot be null", e.getMessage());
+        }
+    }
+    @Test
     public void testLowerCase()
     {
         String val3 = " _____   _____   _____ \n|_   _| |_   _| |_   _|\n  | |     | |     | |  \n  | |     | |     | |  \n _| |_   _| |_   _| |_ \n|_____| |_____| |_____|";

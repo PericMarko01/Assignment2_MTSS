@@ -13,6 +13,10 @@ public class RomanPrinter {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
     public static String printAsciiArt(String romanNumber) {
+        if(romanNumber == null)
+        {
+            throw new NullPointerException("The string cannot be null");
+        }
         if(romanNumber == "") 
         {
             return "";
